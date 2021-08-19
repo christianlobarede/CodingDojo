@@ -1,4 +1,5 @@
 import "./App.css";
+import AxiosFetched from "./Components/AxiosFetched";
 import Clock from "./Components/Clock";
 import FetchPokemon from "./Components/FetchPokemon";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Clock />
       <FetchPokemon />
+      <AxiosFetched />
     </div>
   );
 }

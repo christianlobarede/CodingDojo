@@ -1,5 +1,27 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+
+.item-1 {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.item-2 {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 500px;
+}
+.item-3 {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 800px;
 }
 
 .App-logo {

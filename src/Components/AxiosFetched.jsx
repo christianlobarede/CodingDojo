@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
-const FetchPokemon = () => {
+const AxiosFetched = () => {
   const [pokemonList, setPokemonList] = useState([]);
 
   const onClickHandler = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=807`)
-      .then((response) => response.json())
-      .then((response) => setPokemonList(response.results));
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=807`)
+      .then((response) => response.data)
+      .then((response) => {
+        setPokemonList(response.results);
+      });
   };
 
   console.log(pokemonList);
 
   return (
-    <div className="item-3">
+    <div className="item-2">
       <button onClick={onClickHandler}>
-        Click aqui para obtener los pokemon con Fetch
+        Click aqui para obtener los pokemon con Axios
       </button>
       {pokemonList.length > 0 &&
         pokemonList.map((poke, index) => {
@@ -28,4 +32,4 @@ const FetchPokemon = () => {
   );
 };
 
-export default FetchPokemon;
+export default AxiosFetched;

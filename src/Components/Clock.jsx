@@ -12,7 +12,7 @@ const Clock = () => {
   }, []);
 
   return (
-    <div>
+    <div className="item-1">
       <p>Current time: {time}</p>
     </div>
   );
