@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "@reach/router";
 import axios from "axios";
 
 const AxiosFetched = () => {
@@ -17,6 +18,7 @@ const AxiosFetched = () => {
 
   return (
     <div className="item-2">
+      <Link to="/home">Home</Link>
       <button onClick={onClickHandler}>
         Click aqui para obtener los pokemon con Axios
       </button>
@@ -28,6 +30,7 @@ const AxiosFetched = () => {
             </div>
           );
         })}
+      <Link to="/fetch">Link to Fetch</Link>
     </div>
   );
 };

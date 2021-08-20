@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "@reach/router";
 
 const FetchPokemon = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -13,6 +14,7 @@ const FetchPokemon = () => {
 
   return (
     <div className="item-3">
+      <Link to="/home">Home</Link>
       <button onClick={onClickHandler}>
         Click aqui para obtener los pokemon con Fetch
       </button>
@@ -24,6 +26,7 @@ const FetchPokemon = () => {
             </div>
           );
         })}
+      <Link to="/axios">Link to axios</Link>
     </div>
   );
 };
